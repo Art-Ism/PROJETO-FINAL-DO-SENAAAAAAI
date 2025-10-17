@@ -6,5 +6,5 @@ app = Flask(__name__)
 # registro das controller
 app.register_blueprint(aluno_controller)
 
-if __name__ == "__main__":
+if __name__ == "_main_":
     app.run(debug=True)
