@@ -16,7 +16,7 @@ def adicionar_usuario():
     dados = request.get_json()
     obj_usuario = Usuario(id=0, usuario=dados["usuario"],
                       senha=dados["senha"], ativo=dados["ativo"])
-    usuario = usuario_service.adicionar_aluno(obj_usuario)
+    usuario = usuario_service.adicionar_usuario(obj_usuario)
     return usuario(usuario), 201
 
 @usuario_controller.route('/<int:id>', methods=['GET'])

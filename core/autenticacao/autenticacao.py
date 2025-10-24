@@ -4,7 +4,7 @@ from flask import request, jsonify
 
 from core.usuario.usuario_service import UsuarioService
 
-def autenticacao(f):
+def autentificacao(f):
     @wraps(f)
     def decorated(*args, **kwargs):
         auth = request.headers.get("Authorization")

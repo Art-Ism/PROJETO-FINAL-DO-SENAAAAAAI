@@ -31,9 +31,13 @@ class UsuarioService:
             return {"id":usuario_id, "removido": True}
         
     def obter_usuario_por_id(self, usuario_id):
-        usuario = self.repsitory.obter_por_id(usuario_id)
+        usuario = self.repository.obter_por_id(usuario_id)
         if not usuario:
             return None
         else:
             return usuario
+        
+    
+    def obter_usuario_por_usuario_senha(self, usuario, senha):
+        return self.repository.buscar_usuario_por_usuario_senha(usuario, senha)
         

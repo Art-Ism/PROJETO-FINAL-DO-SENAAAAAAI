@@ -31,7 +31,7 @@ class ProfessorService:
             return {"id":professor_id, "removido": True}
         
     def obter_professor_por_id(self, professor_id):
-        professor = self.repsitory.obter_por_id(professor_id)
+        professor = self.repository.obter_por_id(professor_id)
         if not professor:
             return None
         else:
